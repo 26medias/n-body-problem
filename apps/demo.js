@@ -2,18 +2,16 @@
 	Basic proof of concept
 */
 
-var engine = new Engine({
-	scale:	2000
-});
+var engine = new Engine();
 
-engine.add('Sun', 0, 0, {
-	radius:	695700,
-	mass:	1.98855e+30
-});
-
-engine.add('Earth', 0, 149597870700, {
+engine.add('Earth', 0, 0, {
 	radius:	6371,
 	mass:	5.97237e+24
+});
+
+engine.add('Moon', 356500, 33, {
+	radius:	1737,
+	mass:	7.342e+22
 });
 
 engine.start();
