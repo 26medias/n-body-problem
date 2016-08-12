@@ -1,6 +1,7 @@
 
 function Rainbow()
 {
+	var scope = this;
 	var gradients = null;
 	var minNum = 0;
 	var maxNum = 100;
@@ -53,6 +54,15 @@ function Rainbow()
 		}
 	}
 	this.colorAt = this.colourAt;
+	this.rgbAt	= function(number, alpha) {
+		var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(scope.colourAt(number));
+		return result ? {
+			r:	parseInt(result[1], 16),
+			g:	parseInt(result[2], 16),
+			b:	parseInt(result[3], 16),
+			a:	alpha||255
+		} : null;
+	}
 
 	this.setNumberRange = function (minNumber, maxNumber)
 	{

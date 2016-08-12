@@ -27,11 +27,15 @@
 		<link rel="stylesheet" href="css/n-body.css" type="text/css" />
 	</head>
 	<body>
-		<canvas></canvas>
+		<div class="simulator">
+			<canvas id="objects"></canvas>
+			<canvas id="gravity"></canvas>
+		</div>
 		
 		
 		<script type="text/javascript" src="dependencies/jquery-1.12.3.min.js"></script>
 		<script type="text/javascript" src="dependencies/underscore-min.js"></script>
+		<script type="text/javascript" src="dependencies/rainbow.js"></script>
 		<script type="text/javascript" src="engine/engine.js"></script>
 		<script type="text/javascript" src="renderer/renderer.js"></script>
 		<script type="text/javascript" src="physics/physics.js"></script>
